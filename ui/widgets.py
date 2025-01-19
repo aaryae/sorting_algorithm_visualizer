@@ -1,5 +1,6 @@
 from tkinter import *
-from config.settings import BACKGROUND_COLOR, SORTING_ALGORITHMS, BUTTON_STYLE
+import random
+from config.settings import BACKGROUND_COLOR, SORTING_ALGORITHMS, BUTTON_STYLE,MAX_BAR_HEIGHT,DEFAULT_BAR_COUNT
 
 
 class SortingVisualizerUI:
@@ -32,8 +33,15 @@ class SortingVisualizerUI:
         self.start_button = Button(control_frame, text="Start Sorting", **BUTTON_STYLE)
         self.start_button.pack(side=LEFT, padx=5)
 
-        #canvas for rectangle bars
-        
+       # Canvas for rectangle bars
+        canvas = Canvas(self.root, width=1000, height=400, bg="white")
+        canvas.pack()
+
+        for i in range(14):
+            BAR_COORDINATE = i * 55  # Increment by bar width + spacing
+            RANDOM_VALUE=random.randint(0, 400)
+            canvas.create_rectangle(BAR_COORDINATE, MAX_BAR_HEIGHT - RANDOM_VALUE, BAR_COORDINATE + 50, MAX_BAR_HEIGHT, fill="blue", outline="black")
+
 
     def get_widgets(self):
         # Return important widget references if needed

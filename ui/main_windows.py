@@ -8,6 +8,8 @@ def initialize_main_window():
     root.title(WINDOW_TITLE)
     root.geometry(f"{WINDOW_WIDTH}x{WINDOW_HEIGHT}")
     root.configure(bg=BACKGROUND_COLOR)
+    root.resizable(False, False)
+
 
     # Create the UI class instance
     ui = SortingVisualizerUI(root)

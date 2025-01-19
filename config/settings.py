@@ -19,7 +19,7 @@ MAX_SPEED = 1000       # Maximum speed (slowest)
 # Data Settings
 MIN_BAR_HEIGHT = 10    # Minimum height of a bar
 MAX_BAR_HEIGHT = 400   # Maximum height of a bar
-DEFAULT_BAR_COUNT = 20 # Default number of bars to visualize
+DEFAULT_BAR_COUNT = 14 # Default number of bars to visualize
 
 # Font Settings
 FONT_FAMILY = "Arial"

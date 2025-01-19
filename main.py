@@ -1,5 +1,5 @@
-from ui.main_windows import initialize_main_window
-import random
+from ui.main_windows import *
+
 
 def main():
     root, widgets = initialize_main_window()
